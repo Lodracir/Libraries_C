@@ -1,51 +1,30 @@
 // Library Include
 #include "statistics.h"
 
-//
-static void StatisticsInit(statistics_t *stats);
-
-//
-static void LIB_MEAN(int16_t *valuesArray, uint16_t n, float *result);
-
-// 
-
-void StatisticsBegin(void)
-{
-    StatisticsInit(&stats);
-}
-
-static void StatisticsInit(statistics_t *stats)
-{
-    stats->mean = LIB_MEAN;
-}
-
 // Functions
-static void LIB_MEAN(int16_t *valuesArray, uint16_t n, float *result)
+float StatisticsMean( int16_t *valuesArray, uint16_t Size );
 {
     // local Variables
+    float result = 0.0;
     int itr = 0;
     int16_t *ptr = NULL;
     
-    if(n < 2)
+    if( Size < 2 )
     {
-        (*result) = 0;
+       return 0;
     }
     else
     {
-        
-        (*result) = 0;
+        result = 0;
         ptr = valuesArray;
     
-        for(itr = 0; itr < n; itr++)
+        for( itr = 0; itr < Size; itr++ )
         {
-            (*result) += (float)(*ptr);
+            result += (float)(*ptr);
             ptr++;
         }
     
         ptr = NULL;
-        (*result) = (*result)/(float)n;
-        
+        return (*result)/(float)Size;
     }
-
-    
 }

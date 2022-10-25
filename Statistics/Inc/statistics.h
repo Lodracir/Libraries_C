@@ -7,18 +7,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-// Functions Typedef struct
-typedef struct
-{
-    
-    void    (*mean)(int16_t *valuesArray, uint16_t n, float *result);
-    
-}statistics_t;
-
-// 
-statistics_t stats;
-
-// Prototype Function
-void StatisticsBegin(void);
+float StatisticsMean( int16_t *valuesArray, uint16_t n );
+float StatisticsSTD(void);
 
 #endif // _STATISTICS_H_
