@@ -7,37 +7,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* ------ Math Function Structure ------ */
-typedef struct
-{
-    
-    // Simple Math Operations
-    int16_t     (*Add)(int16_t a, int16_t b);
-    int16_t     (*Sub)(int16_t a, int16_t b);
-    int16_t     (*Multp)(int16_t a, int16_t b);
-    float       (*Div)(int16_t a, int16_t b);
-    
-    // Array Math Operations
-    int16_t     (*ArrayOp)(int16_t *buffer, uint8_t size);
-    int32_t     (*ArrayMultp)(int32_t *buffer, uint8_t size);
-   
-    // Other Math Operations
-    int16_t     (*Pow)(int8_t n, int8_t x)
-
-}mathFunction_t;
-
-/* ------ Math structure definition ------ */
-extern mathFunction_t Math;
+/* ------------------------------------------------
+* Defines
+* ------------------------------------------------ */
+#define MATH_PI (3.141592653L)
 
 /* ------------------------------------------------
  * Prototype Functions
  * ------------------------------------------------ */
-int16_t MathAdd(int16_t a, int16_t b);
-int16_t MathSub(int16_t a, int16_t b);
-int16_t MathMultp(int16_t a, int16_t b);
-float   MathDivision(int16_t a, int16_t b);
-int16_t MathArrayOperation(int16_t *buffer, uint8_t size);
-int32_t MathMultpArray(int32_t *buffer, uint8_t size);
-int16_t MathPow(int8_t n, int8_t x);
+int16_t iMath_Add(int16_t a, int16_t b);
+int16_t iMath_Sub(int16_t a, int16_t b);
+int16_t iMath_Multp(int16_t a, int16_t b);
+float   fMath_Division(int16_t a, int16_t b);
+int16_t iMath_ArrayOperation(int16_t *buffer, uint8_t size);
+int32_t iMath_MultpArray(int32_t *buffer, uint8_t size);
+int16_t iMath_Pow(int8_t n, int8_t x);
 
 #endif // _MATHC_H_

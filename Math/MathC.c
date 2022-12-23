@@ -12,48 +12,48 @@
 * ------------------------------------------------ */
 
 /*
- * @Name: Math Add
- * @brief: Add two numbers
+ * @Name:   iMath_Add
+ * @brief:  Add two numbers
  * @values: int16_t a , int16_t b
  * @return: int16_t result
  */
-static int16_t MathAdd(int16_t a, int16_t b)
+int16_t iMath_Add(int16_t a, int16_t b)
 {
     return a + b;
 }
 
 
 /*
- * @Name: Math Sub
- * @brief: Substract two number
+ * @Name:   iMath_Sub
+ * @brief:  Substract two number
  * @values: int16_t a , int16_t b
  * @return: int16_t result
  */
-static int16_t MathSub(int16_t a, int16_t b)
+int16_t iMath_Sub(int16_t a, int16_t b)
 {
     return a - b;
 }
 
 
 /*
- * @Name: Math Multp
- * @brief: Multiply two number
+ * @Name:   iMath_Multp
+ * @brief:  Multiply two number
  * @values: int16_t a , int16_t b
  * @return: int16_t result
  */
-static int16_t MathMultp(int16_t a, int16_t b)
+int16_t iMath_Multp(int16_t a, int16_t b)
 {
     return a * b;
 }
 
 
 /*
- * @Name:
+ * @Name:   fMath_Division
  * @brief:
  * @values:
  * @return:
  */
-static float MathDivision(int16_t a, int16_t b)
+float fMath_Division(int16_t a, int16_t b)
 {
     if( b == 0 )
     {
@@ -65,12 +65,12 @@ static float MathDivision(int16_t a, int16_t b)
 
 
 /*
- * @Name:
+ * @Name:   iMath_ArrayOperation
  * @brief:
  * @values:
  * @return:
  */
-static int16_t MathArrayOperation(int16_t *buffer, uint8_t size)
+int16_t iMath_ArrayOperation(int16_t *buffer, uint8_t size)
 {
     // Local Variables
     uint8_t itr = 0;
@@ -92,12 +92,13 @@ static int16_t MathArrayOperation(int16_t *buffer, uint8_t size)
 
 
 /*
- * @Name:
- * @brief:
- * @values:
- * @return:
+ * @Name:   iMath_MultpArray
+ * @brief:  Multiply all number inside array
+ * @values: 1.-Pointer to integer 32 bit data
+ *          2.-Size of buffer/array
+ * @return: Result of multiplication
  */
-static int32_t MathMultpArray(int32_t *buffer, uint8_t size)
+int32_t iMath_MultpArray(int32_t *buffer, uint8_t size)
 {
     // Local Variables
     uint8_t itr = 0;
@@ -119,14 +120,13 @@ static int32_t MathMultpArray(int32_t *buffer, uint8_t size)
 
 
 /*
- * @Name:
+ * @Name:   iMath_Pow
  * @brief:
  * @values:
  * @return:
  */
-static int16_t MathPow(int8_t n, int8_t x)
+int16_t iMath_Pow(int8_t n, int8_t x)
 {
-
     //Local Variables
     int itr = 0;
     uint16_t result = 1;

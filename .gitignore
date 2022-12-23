@@ -1,0 +1,7 @@
+#Main folder
+/.DS_Store
+
+#Math folder
+/Math/.DS_Store/
+/Math/.cache/
+/Math/build/
