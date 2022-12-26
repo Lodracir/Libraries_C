@@ -14,3 +14,8 @@
 /Statistics/build
 /Statistics/cmake-build-debug
 /Statistics/.idea
+
+#Circular buffer folder
+/CircularBuffer/build
+/CircularBuffer/cmake-build-debug
+/CircularBuffer/.idea
