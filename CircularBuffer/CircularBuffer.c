@@ -197,28 +197,6 @@ int CircBuffer_DelByte( CircularBuffer_t *Buff )
  * @param DataSize
  * @return
  ***/
-uint32_t CircBuffer_AvailableBytes( CircularBuffer_t *Buff )
-{
-    return (Buff->DataSize - (Buff->head - Buff->tail));
-}
-
-/***
- * @param Buff
- * @param pData
- * @param DataSize
- * @return
- ***/
-uint32_t CircBuffer_GetUsedBytes( CircularBuffer_t *Buff )
-{
-    return (Buff->head - Buff->tail);
-}
-
-/***
- * @param Buff
- * @param pData
- * @param DataSize
- * @return
- ***/
 int CircBuffer_Flush( CircularBuffer_t *Buff )
 {
     /** Clear Buffer **/

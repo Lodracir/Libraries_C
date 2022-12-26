@@ -56,8 +56,4 @@ uint8_t CircBuffer_ReadByte( CircularBuffer_t *Buff );
 int CircBuffer_Flush( CircularBuffer_t *Buff );
 void CircBuffer_Reset( CircularBuffer_t *Buff );
 
-/** Circular buffer get functions **/
-uint32_t CircBuffer_AvailableBytes( CircularBuffer_t *Buff );
-uint32_t CircBuffer_GetUsedBytes( CircularBuffer_t *Buff );
-
 #endif //INC_001_CIRCULARBUFFER_CIRCULARBUFFER_H

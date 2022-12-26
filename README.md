@@ -12,7 +12,8 @@ Custom libraries written in C, these librares have typical operations that we co
 ## Libraries
 
 - Math (Custom Version)
-- Statistics 
+- Statistics
+- Circular Buffer
 - FFT (Coming Soon)
 
 More libraries will come soon
@@ -24,11 +25,6 @@ Files can be downloaded or cloned, use following git command to clone it:
 ```sh
 git clone https://github.com/Lodracir/Libraries_C.git
 ```
-
-## Development and testing
-
-These libraries also are been testing in embedded systems. Following list will show in which MCUs were tested:
-- **List Coming Soon**
 
 ## License
 
