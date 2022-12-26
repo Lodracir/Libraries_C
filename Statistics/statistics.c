@@ -1,30 +1,71 @@
 // Library Include
 #include "statistics.h"
 
-// Functions
-float StatisticsMean( int16_t *valuesArray, uint16_t Size );
+/**
+ * Static prototype functions
+ **/
+static void SortData_MinToMax(void);
+
+/**
+ * Public functions
+ **/
+ 
+float fStatistics_Average( float *pData, uint16_t DataSize )
 {
     // local Variables
     float result = 0.0;
     int itr = 0;
-    int16_t *ptr = NULL;
     
-    if( Size < 2 )
+    if( DataSize < 2 )
     {
        return 0;
     }
     else
     {
         result = 0;
-        ptr = valuesArray;
     
-        for( itr = 0; itr < Size; itr++ )
+        for( itr = 0; itr < DataSize; itr++ )
         {
-            result += (float)(*ptr);
-            ptr++;
+            result += (*pData);
+            pData++;
         }
     
-        ptr = NULL;
-        return (*result)/(float)Size;
+        return ( result/(float)DataSize );
     }
+}
+
+float fStatistics_GetMaxValue( float *pData, uint16_t DataSize )
+{
+    //Local Variables
+    float result = 0.0;
+    int itr = 0;
+
+    for(itr = 0;itr < DataSize;itr++)
+    {
+        if( (*pData) > result )
+        {
+            result = (*pData);
+        }
+        pData++;
+    }
+
+    return result;
+}
+
+float fStatistics_GetMinValue( float *pData, uint16_t DataSize )
+{
+    //Local Variables
+    float result = (*pData);
+    int itr = 0;
+
+    for(itr = 0;itr < DataSize;itr++)
+    {
+        if( (*pData) < result )
+        {
+            result = (*pData);
+        }
+        pData++;
+    }
+
+    return result;
 }

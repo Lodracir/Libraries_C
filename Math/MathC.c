@@ -53,7 +53,7 @@ int16_t iMath_Multp(int16_t a, int16_t b)
  * @values:
  * @return:
  */
-float fMath_Division(int16_t a, int16_t b)
+float fMath_Division(float a, float b)
 {
     if( b == 0 )
     {
@@ -132,6 +132,62 @@ int16_t iMath_Pow(int8_t n, int8_t x)
     uint16_t result = 1;
 
     for( itr = 1; itr <= x; itr++)
+    {
+        result *= n;
+    }
+
+    return result;
+}
+
+float fMath_Add(float a, float b)
+{
+    return a + b;
+}
+
+float fMath_Sub(float a, float b)
+{
+    return a - b;
+}
+
+float fMath_Multp(float a, float b)
+{
+    return a * b;
+}
+
+float fMath_ArrayOperation(float *buffer, float size)
+{
+    //Local Variables
+    float result = 0;
+
+    for( int itr = 0; itr < size; itr++ )
+    {
+        result += (*buffer);
+        buffer++;
+    }
+
+    return result;
+}
+
+float fMath_MultpArray(float *buffer, float size)
+{
+    //Local Variables
+    float result = 0;
+
+    for( int itr = 0; itr < size; itr++ )
+    {
+        result *= (*buffer);
+        buffer++;
+    }
+
+    return result;
+}
+
+float fMath_Pow(float n, int8_t x)
+{
+    //Local Variables
+    float result = 1;
+
+    for( int itr = 0; itr < x; itr++ )
     {
         result *= n;
     }

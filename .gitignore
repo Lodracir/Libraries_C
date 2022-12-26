@@ -1,7 +1,16 @@
 #Main folder
 /.DS_Store
+/.fleet
 
 #Math folder
-/Math/.DS_Store/
-/Math/.cache/
-/Math/build/
+/Math/.DS_Store
+/Math/.cache
+/Math/build
+
+#Statistics folder
+/Statistics/.DS_Store
+/Statistics/.cache
+/Statistics/.fleet
+/Statistics/build
+/Statistics/cmake-build-debug
+/Statistics/.idea

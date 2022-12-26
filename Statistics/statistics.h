@@ -7,7 +7,12 @@
 #include <stdlib.h>
 #include <math.h>
 
-float StatisticsMean( int16_t *valuesArray, uint16_t n );
+/**
+ * Prototype Functions
+ **/
+float fStatistics_Average( float *pData, uint16_t DataSize );
+float fStatistics_GetMaxValue( float *pData, uint16_t DataSize );
+float fStatistics_GetMinValue( float *pData, uint16_t DataSize );
 float StatisticsSTD(void);
 
 #endif // _STATISTICS_H_
