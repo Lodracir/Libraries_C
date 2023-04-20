@@ -1,6 +1,4 @@
-/**
- * Required Headers
- **/
+/** Required Headers **/
 #include <stdio.h>
 #include <stdint.h>
 #include "MathC.h"
